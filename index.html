@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#jfuj{
+			width: 80%;
+			height: 50px;
+			background: yellow;
+			font-size: 50px;
+			text-align: center;
+			line-height: 50px;
+			margin-left: 0;
+			margin-right: 0;
+			margin: auto;
+		}
+	</style>
+
+	<body>
+		<div id="jfuj">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		//			计时
+		var divs = document.getElementById('jfuj');
+		console.log(divs)
+
+		function pgjf() {
+			var mydate = new Date();
+			var cjdate = new Date(2020, 3, 11);
+			var diff = mydate.getTime() - cjdate.getTime();
+			var tit = Math.floor(diff / 1000 % 60);
+			var wwv = Math.floor(diff / 1000 / 60 % 60);
+			var jfu = Math.floor(diff / 1000 / 60 / 60 % 24);
+			var gdd = Math.floor(diff / 1000 / 60 / 60 / 24);
+			//			console.log(tit)
+
+			divs.innerHTML = "时间起点&nbsp;:&nbsp;" + gdd + "天" + jfu + "小时" + wwv + "分" + tit + "秒";
+
+		}
+		setInterval(pgjf, 1000);
+	</script>
+
+</html>
